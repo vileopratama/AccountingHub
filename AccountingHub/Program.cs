@@ -18,10 +18,16 @@ namespace AccountingHub
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-
             BonusSkins.Register();
+            OfficeSkins.Register();
+            UserLookAndFeel.Default.UseDefaultLookAndFeel = true;
+            UserLookAndFeel.Default.UseWindowsXPTheme = false;
+            UserLookAndFeel.Default.SkinName = "Metropolis";
+            
+            //BonusSkins.Register();
+            SkinManager.EnableMdiFormSkins();
             SkinManager.EnableFormSkins();
-            Application.Run(new Form1());
+            Application.Run(new UxMain());
         }
     }
 }
