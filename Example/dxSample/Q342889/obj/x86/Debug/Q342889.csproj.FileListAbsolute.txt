@@ -1,0 +1,9 @@
+D:\Examples\Q342889\Q342889\bin\Debug\Q342889.exe
+D:\Examples\Q342889\Q342889\bin\Debug\Q342889.pdb
+D:\Examples\Q342889\Q342889\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\Examples\Q342889\Q342889\obj\x86\Debug\Q342889.Form1.resources
+D:\Examples\Q342889\Q342889\obj\x86\Debug\Q342889.Properties.Resources.resources
+D:\Examples\Q342889\Q342889\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\Examples\Q342889\Q342889\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\Examples\Q342889\Q342889\obj\x86\Debug\Q342889.exe
+D:\Examples\Q342889\Q342889\obj\x86\Debug\Q342889.pdb

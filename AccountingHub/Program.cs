@@ -19,7 +19,7 @@ namespace AccountingHub
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             BonusSkins.Register();
-            OfficeSkins.Register();
+            //OfficeSkins.Register();
             UserLookAndFeel.Default.UseDefaultLookAndFeel = true;
             UserLookAndFeel.Default.UseWindowsXPTheme = false;
             UserLookAndFeel.Default.SkinName = "Metropolis";
