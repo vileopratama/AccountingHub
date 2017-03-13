@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using DevExpress.UserSkins;
 using DevExpress.Skins;
 using DevExpress.LookAndFeel;
+using AccountingHub.Classes;
 
 namespace AccountingHub
 {
@@ -23,11 +24,22 @@ namespace AccountingHub
             UserLookAndFeel.Default.UseDefaultLookAndFeel = true;
             UserLookAndFeel.Default.UseWindowsXPTheme = false;
             UserLookAndFeel.Default.SkinName = "Metropolis";
-            
+
+			//Binding Database 
+			BindingDatabase();
             //BonusSkins.Register();
             SkinManager.EnableMdiFormSkins();
             SkinManager.EnableFormSkins();
             Application.Run(new UxMain());
         }
-    }
+
+		private static void BindingDatabase()
+		{
+			INI ini = new INI(App.baseDirectory() + "/config.ini");
+			DB.Server = ini.Read("Database", "Server");
+			DB.Database = ini.Read("Database", "Database");
+			DB.Username = ini.Read("Database", "Username");
+			DB.Password = ini.Read("Database", "Password");
+		}
+	}
 }

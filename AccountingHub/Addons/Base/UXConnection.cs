@@ -20,9 +20,19 @@ namespace AccountingHub.Addons.Base
 			//bindingValidate();
 			if(dxValidationProvider.Validate())
 			{
+				string Group = cbGroup.SelectedItem.ToString();
+				string Database;
+				switch(Group)
+				{
+					case "BKI": Database = "AR_BKI";break;
+					case "BMI": Database = "AR_BDO"; break;
+					case "KJPP": Database = "AR_KJPP"; break;
+					default: Database = "AR";break;
+				}
+
 				INI ini = new INI(App.baseDirectory() + "/config.ini");
 				ini.Write("Database", "Server", txtServerName.Text);
-				ini.Write("Database", "Database", "AR_" + cbGroup.SelectedItem);
+				ini.Write("Database", "Database",Database);
 				ini.Write("Database", "Username", txtUsername.Text);
 				ini.Write("Database", "Password", txtPassword.Text);
 

@@ -28,16 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+			this.components = new System.ComponentModel.Container();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UxReportAgingListView));
 			this.panel1 = new System.Windows.Forms.Panel();
 			this.btnSearch = new ns1.BunifuFlatButton();
 			this.dtDateTo = new System.Windows.Forms.DateTimePicker();
 			this.panel2 = new System.Windows.Forms.Panel();
 			this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+			this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+			this.toolStripPrintPreview = new System.Windows.Forms.ToolStripMenuItem();
 			this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
 			this.panel1.SuspendLayout();
 			this.panel2.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+			this.contextMenuStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
 			this.SuspendLayout();
 			// 
@@ -106,6 +110,7 @@
 			// 
 			// gridControl1
 			// 
+			this.gridControl1.ContextMenuStrip = this.contextMenuStrip1;
 			this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.gridControl1.Location = new System.Drawing.Point(0, 0);
 			this.gridControl1.MainView = this.gridView1;
@@ -114,6 +119,20 @@
 			this.gridControl1.TabIndex = 1;
 			this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
+			// 
+			// contextMenuStrip1
+			// 
+			this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripPrintPreview});
+			this.contextMenuStrip1.Name = "contextMenuStrip1";
+			this.contextMenuStrip1.Size = new System.Drawing.Size(153, 48);
+			// 
+			// toolStripPrintPreview
+			// 
+			this.toolStripPrintPreview.Name = "toolStripPrintPreview";
+			this.toolStripPrintPreview.Size = new System.Drawing.Size(152, 22);
+			this.toolStripPrintPreview.Text = "Print Preview";
+			this.toolStripPrintPreview.Click += new System.EventHandler(this.toolStripPrintPreview_Click);
 			// 
 			// gridView1
 			// 
@@ -135,6 +154,7 @@
 			this.panel1.ResumeLayout(false);
 			this.panel2.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+			this.contextMenuStrip1.ResumeLayout(false);
 			((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
 			this.ResumeLayout(false);
 
@@ -148,5 +168,7 @@
 		private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
 		private System.Windows.Forms.DateTimePicker dtDateTo;
 		private ns1.BunifuFlatButton btnSearch;
+		private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+		private System.Windows.Forms.ToolStripMenuItem toolStripPrintPreview;
 	}
 }

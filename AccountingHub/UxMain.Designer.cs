@@ -264,7 +264,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;
         private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-		private DevExpress.XtraTabbedMdi.XtraTabbedMdiManager TabMDIUX;
+		public DevExpress.XtraTabbedMdi.XtraTabbedMdiManager TabMDIUX;
 	}
 }
 

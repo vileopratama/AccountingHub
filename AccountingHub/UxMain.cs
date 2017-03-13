@@ -33,7 +33,7 @@ namespace AccountingHub
 				uxConnection.MdiParent = this;
 				TabMDIUX.MdiParent = this;
 				uxConnection.Show();
-				//uxConnection.Dock = DockStyle.Fill;
+				uxConnection.Dock = DockStyle.Fill;
 				uxConnection.BringToFront();
 
 			}
@@ -58,7 +58,7 @@ namespace AccountingHub
 				uxAgingReport.MdiParent = this;
 				TabMDIUX.MdiParent = this;
 				uxAgingReport.Show();
-				//uxConnection.Dock = DockStyle.Fill;
+				uxAgingReport.Dock = DockStyle.Fill;
 				uxAgingReport.BringToFront();
 
 			}

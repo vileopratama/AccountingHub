@@ -1,13 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DevExpress.XtraEditors;
 using AccountingHub.Classes;
 using System.Data.SqlClient;
 using DevExpress.XtraGrid;
@@ -17,18 +10,22 @@ namespace AccountingHub.Addons.ReportAging
 {
     public partial class UxReportAgingListView : DevExpress.XtraEditors.XtraForm
     {
-        public UxReportAgingListView()
+		Addons.ReportAging.Reports.UXReportAgingCRView uxReportAgingCRView;
+
+		public UxReportAgingListView()
         {
             InitializeComponent();
         }
 
-		public void initGridView()
+		public void init()
 		{
 			DateTime dateTo = dtDateTo.Value;
+			//fill from dateTo
+			Models.ReportAging.DateTo = dateTo;
 			DB.Connect();
 			SqlCommand sql_command;
 			DataTable dt = new DataTable();
-			sql_command = new SqlCommand("aging_report", DB.conn);
+			sql_command = new SqlCommand("_REPORT_AGING", DB.conn);
 			sql_command.CommandType = CommandType.StoredProcedure;
 			sql_command.Parameters.Add("@DATETO", SqlDbType.DateTime).Value = dateTo;
 			SqlDataAdapter da = new SqlDataAdapter(sql_command);
@@ -39,11 +36,12 @@ namespace AccountingHub.Addons.ReportAging
 			da.Update(dt);
 			GroupColumns();
 			SetSummaryItems();
+			
 		}
 
 		private void UxReportAgingListView_Load(object sender, EventArgs e)
 		{
-			this.initGridView();
+			this.init();
 		}
 
 		private void GroupColumns()
@@ -92,9 +90,30 @@ namespace AccountingHub.Addons.ReportAging
 
 		private void btnSearch_Click(object sender, EventArgs e)
 		{
-			var executingFolder = System.IO.Path.GetDirectoryName(Application.ExecutablePath);
-			MessageBox.Show("DATA" + executingFolder);
-			this.initGridView();
+			this.init();
+		}
+
+		private void uxReportAgingCRView_Disposed(object sender, EventArgs e)
+		{
+			uxReportAgingCRView = null;
+		}
+
+		private void toolStripPrintPreview_Click(object sender, EventArgs e)
+		{
+			if (uxReportAgingCRView == null)
+			{
+				uxReportAgingCRView = new Addons.ReportAging.Reports.UXReportAgingCRView();
+				uxReportAgingCRView.Disposed += new EventHandler(uxReportAgingCRView_Disposed); //Add Disposed EventHandler
+				uxReportAgingCRView.MdiParent = this.ParentForm;
+				uxReportAgingCRView.Show();
+				uxReportAgingCRView.Dock = DockStyle.Fill;
+				uxReportAgingCRView.BringToFront();
+			}
+			else
+			{
+				uxReportAgingCRView.Activate();
+				uxReportAgingCRView.BringToFront();
+			}
 		}
 	}
 }

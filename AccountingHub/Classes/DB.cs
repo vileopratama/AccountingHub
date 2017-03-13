@@ -10,9 +10,9 @@ namespace AccountingHub.Classes
 		public static SqlCommand cmd;
 		private static string server;
 		private static string database;
-		public static string username;
-		public static string password;
-		public static bool is_connected = false;
+		private static string username;
+		private static string password;
+		private static bool is_connected = false;
 
 		public static string Server
 		{
@@ -50,7 +50,7 @@ namespace AccountingHub.Classes
 			try
 			{
 				conn.ConnectionString = "Server="+ Server +";" +
-										"DataBase=AR;" +
+										"DataBase=" + Database + ";" +
 										"User Id="+ Username +";" +
 										"Password=" + Password + ";";
 				conn.Open();
@@ -59,7 +59,6 @@ namespace AccountingHub.Classes
 			catch (SqlException ex)
 			{
 				isConnected = false;
-				//MessageBox.Show(ex.Message, "Database Connection");
 			}
 		}
 
