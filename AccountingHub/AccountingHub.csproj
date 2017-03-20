@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <NoWin32Manifest>true</NoWin32Manifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>apps.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Bunifu_UI_v1.52">
       <HintPath>ui\dll\Bunifu_UI_v1.52.dll</HintPath>
@@ -86,10 +93,10 @@
     <Compile Include="Addons\ReportAging\Reports\UXReportAgingCRView.Designer.cs">
       <DependentUpon>UXReportAgingCRView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Addons\ReportAging\UxReportAgingListView.cs">
+    <Compile Include="Addons\ReportAging\Reports\UxReportAgingListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Addons\ReportAging\UxReportAgingListView.Designer.cs">
+    <Compile Include="Addons\ReportAging\Reports\UxReportAgingListView.Designer.cs">
       <DependentUpon>UxReportAgingListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\App.cs" />
@@ -113,7 +120,7 @@
     <EmbeddedResource Include="Addons\ReportAging\Reports\UXReportAgingCRView.resx">
       <DependentUpon>UXReportAgingCRView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Addons\ReportAging\UxReportAgingListView.resx">
+    <EmbeddedResource Include="Addons\ReportAging\Reports\UxReportAgingListView.resx">
       <DependentUpon>UxReportAgingListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UxMain.resx">
@@ -141,6 +148,10 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app.ico" />
+    <Content Include="apps.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

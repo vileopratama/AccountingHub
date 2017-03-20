@@ -68,5 +68,10 @@ namespace AccountingHub
 				uxAgingReport.BringToFront();
 			}
 		}
+
+		private void UxMain_Load(object sender, EventArgs e)
+		{
+
+		}
 	}
 }

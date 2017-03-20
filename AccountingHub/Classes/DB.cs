@@ -6,8 +6,8 @@ namespace AccountingHub.Classes
 	class DB
 	{
 		public static SqlConnection conn = new SqlConnection();
-		public static string SQL;
-		public static SqlCommand cmd;
+		public static string SQL="";
+		public static SqlCommand cmd = null;
 		private static string server;
 		private static string database;
 		private static string username;
@@ -56,7 +56,7 @@ namespace AccountingHub.Classes
 				conn.Open();
 				isConnected = true;
 			}
-			catch (SqlException ex)
+			catch (SqlException)
 			{
 				isConnected = false;
 			}

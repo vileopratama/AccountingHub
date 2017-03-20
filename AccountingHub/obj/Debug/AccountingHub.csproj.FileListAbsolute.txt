@@ -135,7 +135,6 @@ C:\wampp\AccountingHub\AccountingHub\bin\Debug\de\DevExpress.Office.v16.1.Core.r
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\es\DevExpress.Office.v16.1.Core.resources.dll
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\ja\DevExpress.Office.v16.1.Core.resources.dll
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\ru\DevExpress.Office.v16.1.Core.resources.dll
-C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.csprojResolveAssemblyReference.cache
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Addons.ReportAging.UxReportAgingListView.resources
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.UxMain.resources
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Properties.Resources.resources
@@ -175,3 +174,4 @@ C:\wampp\AccountingHub\AccountingHub\bin\Debug\ShockwaveFlashObjects.dll
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\stdole.dll
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Addons.ReportAging.Reports.UXReportAgingCRView.resources
+C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.csprojResolveAssemblyReference.cache

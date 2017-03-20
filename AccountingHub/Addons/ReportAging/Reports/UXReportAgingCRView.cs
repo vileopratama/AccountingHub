@@ -20,7 +20,7 @@ namespace AccountingHub.Addons.ReportAging.Reports
 			ConnectionInfo crConnectionInfo = new ConnectionInfo();
 			Tables CrTables;
 			//SQL Server Connection
-			cryRpt.Load("reports/UXReportAging.rpt");
+			cryRpt.Load("../../Addons/ReportAging/Reports/UXReportAging.rpt");
 			crConnectionInfo.ServerName = DB.Server;
 			crConnectionInfo.DatabaseName = DB.Database;
 			crConnectionInfo.UserID = DB.Username;

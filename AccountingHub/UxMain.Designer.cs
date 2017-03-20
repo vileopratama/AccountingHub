@@ -237,6 +237,7 @@
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "Accounting Hub";
 			this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+			this.Load += new System.EventHandler(this.UxMain_Load);
 			((System.ComponentModel.ISupportInitialize)(this.barUX)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.TabMDIUX)).EndInit();
 			this.ResumeLayout(false);
