@@ -9,11 +9,18 @@ namespace AccountingHub.Addons.ReportAging.Models
 	class ReportAging
 	{
 		private static DateTime dateto;
+		private static String name;
 
 		public static DateTime DateTo
 		{
 			get { return dateto; }
 			set { dateto = value; }
+		}
+
+		public static String Name
+		{
+			get { return name; }
+			set { name = value; }
 		}
 	}
 }

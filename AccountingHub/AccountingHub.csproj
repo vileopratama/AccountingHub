@@ -93,11 +93,24 @@
     <Compile Include="Addons\ReportAging\Reports\UXReportAgingCRView.Designer.cs">
       <DependentUpon>UXReportAgingCRView.cs</DependentUpon>
     </Compile>
-    <Compile Include="Addons\ReportAging\Reports\UxReportAgingListView.cs">
+    <Compile Include="Addons\ReportAging\UxReportAgingListView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Addons\ReportAging\Reports\UxReportAgingListView.Designer.cs">
+    <Compile Include="Addons\ReportAging\UxReportAgingListView.Designer.cs">
       <DependentUpon>UxReportAgingListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\ReportAging\Reports\WaitForm1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addons\ReportAging\Reports\WaitForm1.Designer.cs">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Addons\ReportOutstanding\Models\ReportOutstanding.cs" />
+    <Compile Include="Addons\ReportOutstanding\UxReportOutstandingListView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Addons\ReportOutstanding\UxReportOutstandingListView.Designer.cs">
+      <DependentUpon>UxReportOutstandingListView.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\App.cs" />
     <Compile Include="Classes\DB.cs" />
@@ -120,8 +133,14 @@
     <EmbeddedResource Include="Addons\ReportAging\Reports\UXReportAgingCRView.resx">
       <DependentUpon>UXReportAgingCRView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Addons\ReportAging\Reports\UxReportAgingListView.resx">
+    <EmbeddedResource Include="Addons\ReportAging\UxReportAgingListView.resx">
       <DependentUpon>UxReportAgingListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\ReportAging\Reports\WaitForm1.resx">
+      <DependentUpon>WaitForm1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Addons\ReportOutstanding\UxReportOutstandingListView.resx">
+      <DependentUpon>UxReportOutstandingListView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UxMain.resx">
       <DependentUpon>UxMain.cs</DependentUpon>

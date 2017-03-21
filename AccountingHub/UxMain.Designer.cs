@@ -41,7 +41,7 @@
 			this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
 			this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
 			this.barReportAging = new DevExpress.XtraBars.BarButtonItem();
-			this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
+			this.barReportOutstanding = new DevExpress.XtraBars.BarButtonItem();
 			this.bar3 = new DevExpress.XtraBars.Bar();
 			this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
 			this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
@@ -71,7 +71,7 @@
             this.barSubItem2,
             this.barButtonItem3,
             this.barReportAging,
-            this.barButtonItem5,
+            this.barReportOutstanding,
             this.barButtonItem6,
             this.barButtonItem7,
             this.barButtonItem8});
@@ -155,7 +155,7 @@
 			this.barSubItem2.Id = 3;
 			this.barSubItem2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
             new DevExpress.XtraBars.LinkPersistInfo(this.barReportAging),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem5)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.barReportOutstanding)});
 			this.barSubItem2.Name = "barSubItem2";
 			// 
 			// barReportAging
@@ -165,11 +165,12 @@
 			this.barReportAging.Name = "barReportAging";
 			this.barReportAging.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barReportAging_ItemClick);
 			// 
-			// barButtonItem5
+			// barReportOutstanding
 			// 
-			this.barButtonItem5.Caption = "&Outstanding Report";
-			this.barButtonItem5.Id = 6;
-			this.barButtonItem5.Name = "barButtonItem5";
+			this.barReportOutstanding.Caption = "&Outstanding Report";
+			this.barReportOutstanding.Id = 6;
+			this.barReportOutstanding.Name = "barReportOutstanding";
+			this.barReportOutstanding.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barReportOutstanding_ItemClick);
 			// 
 			// bar3
 			// 
@@ -260,7 +261,7 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem3;
         private DevExpress.XtraBars.BarSubItem barSubItem2;
         private DevExpress.XtraBars.BarButtonItem barReportAging;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
+        private DevExpress.XtraBars.BarButtonItem barReportOutstanding;
         private DevExpress.XtraBars.BarButtonItem barButtonItem2;
         private DevExpress.XtraBars.BarButtonItem barButtonItem6;
         private DevExpress.XtraBars.BarButtonItem barButtonItem7;

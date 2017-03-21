@@ -175,3 +175,5 @@ C:\wampp\AccountingHub\AccountingHub\bin\Debug\CrystalDecisions.ReportAppServer.
 C:\wampp\AccountingHub\AccountingHub\bin\Debug\stdole.dll
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Addons.ReportAging.Reports.UXReportAgingCRView.resources
 C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.csprojResolveAssemblyReference.cache
+C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Addons.ReportAging.Reports.WaitForm1.resources
+C:\wampp\AccountingHub\AccountingHub\obj\Debug\AccountingHub.Addons.ReportOutstanding.UxReportOutstandingListView.resources
