@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AccountingHub.Addons.ReportAging.Reports {
+namespace AccountingHub.Addons.ReportOutstanding.Reports {
     using System;
     using System.ComponentModel;
     using CrystalDecisions.Shared;
@@ -16,14 +16,14 @@ namespace AccountingHub.Addons.ReportAging.Reports {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class UXReportAging : ReportClass {
+    public class UXReportOutstanding : ReportClass {
         
-        public UXReportAging() {
+        public UXReportOutstanding() {
         }
         
         public override string ResourceName {
             get {
-                return "UXReportAging.rpt";
+                return "UXReportOutstanding.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace AccountingHub.Addons.ReportAging.Reports {
         
         public override string FullResourceName {
             get {
-                return "AccountingHub.Addons.ReportAging.Reports.UXReportAging.rpt";
+                return "AccountingHub.Addons.ReportOutstanding.Reports.UXReportOutstanding.rpt";
             }
             set {
                 // Do nothing
@@ -114,7 +114,7 @@ namespace AccountingHub.Addons.ReportAging.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_CRDateTo {
+        public CrystalDecisions.Shared.IParameterField Parameter_NAMA_PARTNER {
             get {
                 return this.DataDefinition.ParameterFields[1];
             }
@@ -122,7 +122,7 @@ namespace AccountingHub.Addons.ReportAging.Reports {
         
         [Browsable(false)]
         [DesignerSerializationVisibilityAttribute(System.ComponentModel.DesignerSerializationVisibility.Hidden)]
-        public CrystalDecisions.Shared.IParameterField Parameter_NAMA_KLIEN {
+        public CrystalDecisions.Shared.IParameterField Parameter_CRDateTo {
             get {
                 return this.DataDefinition.ParameterFields[2];
             }
@@ -130,9 +130,9 @@ namespace AccountingHub.Addons.ReportAging.Reports {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedUXReportAging : Component, ICachedReport {
+    public class CachedUXReportOutstanding : Component, ICachedReport {
         
-        public CachedUXReportAging() {
+        public CachedUXReportOutstanding() {
         }
         
         [Browsable(false)]
@@ -169,7 +169,7 @@ namespace AccountingHub.Addons.ReportAging.Reports {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            UXReportAging rpt = new UXReportAging();
+            UXReportOutstanding rpt = new UXReportOutstanding();
             rpt.Site = this.Site;
             return rpt;
         }

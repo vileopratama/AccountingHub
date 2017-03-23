@@ -1,13 +1,13 @@
 ﻿using System;
+using AccountingHub.Classes;
 using CrystalDecisions.CrystalReports.Engine;
 using CrystalDecisions.Shared;
-using AccountingHub.Classes;
 
-namespace AccountingHub.Addons.ReportAging.Reports
+namespace AccountingHub.Addons.ReportOutstanding.Reports
 {
-	public partial class UXReportAgingCRView : DevExpress.XtraEditors.XtraForm
+	public partial class UXReportOutstandingCRView : DevExpress.XtraEditors.XtraForm
 	{
-		public UXReportAgingCRView()
+		public UXReportOutstandingCRView()
 		{
 			InitializeComponent();
 		}
@@ -20,7 +20,7 @@ namespace AccountingHub.Addons.ReportAging.Reports
 			ConnectionInfo crConnectionInfo = new ConnectionInfo();
 			Tables CrTables;
 			//SQL Server Connection
-			cryRpt.Load("../../Addons/ReportAging/Reports/UXReportAging.rpt");
+			cryRpt.Load("../../Addons/ReportOutstanding/Reports/UXReportOutstanding.rpt");
 			crConnectionInfo.ServerName = DB.Server;
 			crConnectionInfo.DatabaseName = DB.Database;
 			crConnectionInfo.UserID = DB.Username;
@@ -35,16 +35,15 @@ namespace AccountingHub.Addons.ReportAging.Reports
 			}
 
 			//Parameter Stored Procedured
-			cryRpt.SetParameterValue("@DateTo", Models.ReportAging.DateTo);
-			cryRpt.SetParameterValue("@NAMA_KLIEN", Models.ReportAging.Name);
-			cryRpt.SetParameterValue("CRDateTo", Models.ReportAging.DateTo);
+			cryRpt.SetParameterValue("@DateTo", Models.ReportOutstanding.DateTo);
+			cryRpt.SetParameterValue("@NAMA_PARTNER", Models.ReportOutstanding.Name);
+			cryRpt.SetParameterValue("CRDateTo", Models.ReportOutstanding.DateTo);
 
 			crystalReportViewer1.ReportSource = cryRpt;
 			crystalReportViewer1.Refresh();
-			//crystalReportViewer1.RefreshReport();
 		}
 
-		private void UXReportAgingCRView_Load(object sender, EventArgs e)
+		private void UXReportOutstandingCRView_Load(object sender, EventArgs e)
 		{
 			this.loadReport();
 		}
